@@ -10,6 +10,7 @@ services:
     - "./app.sh:/app.sh"
     - "/var/run/docker.sock:/var/run/docker.sock"
     - "./result:/opt/result"
+    - "./gitcode:/opt/gitcode"
     ports:
     - "9090:9000"
     privileged: true
