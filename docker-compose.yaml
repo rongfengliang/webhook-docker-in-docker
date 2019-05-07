@@ -11,7 +11,6 @@ services:
     - "/var/run/docker.sock:/var/run/docker.sock"
     - "./result:/opt/result"
     - "./gitcode:/opt/gitcode"
-    - "./gitcode/.git:/opt/gitcode/.git"
     ports:
     - "9090:9000"
     privileged: true
