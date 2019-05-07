@@ -4,6 +4,7 @@ services:
     build: ./
     image: dalongrong/webhook-docker-client
     command: ["-verbose", "-hooks=/etc/webhook/hooks.json","-hotreload"]
+    tty: true
     volumes:
     - "./conf/hooks.json:/etc/webhook/hooks.json"
     - "./app.sh:/app.sh"
