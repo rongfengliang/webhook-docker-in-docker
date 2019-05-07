@@ -14,3 +14,9 @@ services:
     ports:
     - "9090:9000"
     privileged: true
+  web:
+    image: nginx
+    ports: 
+    - "8080:80"
+    volumes: 
+    - "./result:/usr/share/nginx/html"
