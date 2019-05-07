@@ -9,8 +9,8 @@ services:
     - "./conf/hooks.json:/etc/webhook/hooks.json"
     - "./app.sh:/app.sh"
     - "/var/run/docker.sock:/var/run/docker.sock"
-    - "./result:/opt/result"
-    - "./gitcode:/opt/gitcode"
+    - "./result:/gitstats"
+    - "./gitcode:/git"
     ports:
     - "9090:9000"
     privileged: true
