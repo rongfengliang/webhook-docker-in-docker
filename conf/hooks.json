@@ -1,0 +1,26 @@
+[
+    {
+      "id": "webhook",
+      "execute-command": "/app.sh",
+      "command-working-directory": "/",
+      "include-command-output-in-response":true,
+      "trigger-rule":
+      {
+        "and":
+        [
+          {
+            "match":
+            {
+              "type": "value",
+              "value": "dalong",
+              "parameter":
+              {
+                "source": "payload",
+                "name": "username"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]

@@ -1,0 +1,14 @@
+version: "3"
+services: 
+  hooks:
+    build: ./
+    image: dalongrong/webhook-docker-client
+    command: ["-verbose", "-hooks=/etc/webhook/hooks.json","-hotreload"]
+    volumes:
+    - "./conf/hooks.json:/etc/webhook/hooks.json"
+    - "./app.sh:/app.sh"
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    - "./result:/opt/result"
+    ports:
+    - "9000:9000"
+    privileged: true
